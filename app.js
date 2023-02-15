@@ -45,3 +45,12 @@ featureItems.forEach(item => {
   });
 });
 
+function toggleNav() {
+  var nav = document.getElementById("nav-menu");
+  nav.classList.toggle("open");
+  if (nav.style.display === "block") {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "block";
+  }
+}
