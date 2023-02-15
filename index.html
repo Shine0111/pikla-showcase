@@ -1,28 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pikla</title>
-    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-    <div class="navigation">
-        <a href="#" class="logo"><img src="images/logo.png" alt="pikla logo"></a>
-        <ul class="nav-links">
-            <li class="nav-item"><a href="#">CONTACT</a></li>
-            <li class="nav-item"><a href="#">ABOUT</a></li>
+    <title>PIKLA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/icon 1.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.png" alt="Logo Pikla" width="97px" height="30px">
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
-    </div>
-    <div class="about-container">
-        <img src="images/women-taxi.svg" alt="A women booking a taxi with Pikla.">
-        <div class="yellow-about-box">
-            <h1 class="bold-pikla">Pikla</h1>
-            <p>C’est une application qui permet aux usager des taxis et des taxis moto de se déplacer plus facilement et en toute sécurité.</p>
-            <a href="#"><button class="gradient-button">En savoir plus</button></a>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <h2>Get a ride anywhere, anytime</h2>
+          <p>With our taxi booking app, you can easily request a ride and get to your destination in no time.</p>
+          <div class="hero-button">
+            <a href="#">Download App</a>
+          </div>
         </div>
-    </div>
-</body>
+      </section>
+      <section id="features">
+        <h2>Features</h2>
+        <ul id="features-list">
+          <li data-feature="booking"><a href="#">Easy booking process</a></li>
+          <li data-feature="tracking"><a href="#">Real-time tracking</a></li>
+          <li data-feature="payments"><a href="#">Cashless payments</a></li>
+          <li data-feature="support"><a href="#">24/7 customer support</a></li>
+        </ul>
+        <p id="feature-explanation"></p>
+      </section>
+      <section id="pricing">
+        <h2>Pricing</h2>
+        <p>Our pricing is affordable and transparent. You only pay what you see.</p>
+        <table>
+          <tr>
+            <th>Service</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Standard</td>
+            <td>$10 per ride</td>
+          </tr>
+          <tr>
+            <td>XL</td>
+            <td>$15 per ride</td>
+          </tr>
+          <tr>
+            <td>Luxury</td>
+            <td>$25 per ride</td>
+          </tr>
+        </table>
+      </section>
+      <section id="reviews">
+        <h2>Reviews</h2>
+        <ul>
+          <li>
+            <p>"I love this app! It's so easy to use and the drivers are always friendly."</p>
+            <p>- Sarah T.</p>
+          </li>
+          <li>
+            <p>"I've been using this app for a year now and I've never had a problem. Highly recommend."</p>
+            <p>- John D.</p>
+          </li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 PIKLA App. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="app.js"></script>
 </html>
