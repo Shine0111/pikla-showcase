@@ -6,7 +6,12 @@
         font-family: Arial, sans-serif;
       }
 
+      html {
+        height: 100%;
+      }
+
       body {
+        height: 100%;
         padding-top: 40px;
         background-color: #f2f2f2;
       }
@@ -41,12 +46,13 @@
 
       nav ul li a {
         text-decoration: none;
-        color: rgb(199, 199, 199);
+        color: white;
         transition: color 0.2s ease-in-out;
       }
 
       nav ul li a:hover {
-        color: #ffffff;
+        text-decoration: underline wavy; text-decoration-color: rgba(255,48,104,1);
+        color: #E2C044;
       }
 
       main {
@@ -78,12 +84,11 @@
       
 
       @media screen and (max-width: 768px) {
-        
         .header-header {
           padding: 0%;
           margin: 0%;
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
         }
 
@@ -98,33 +103,43 @@
 
         .menu-button {
           display: block;
-          float: right;
+          margin-left: auto;
         }
 
         header {
           flex-direction: column;
           text-align: right;
         }
-      
+
         nav {
           order: 1;
           margin-top: 1rem;
         }
-      
+
         nav ul {
           flex-direction: column;
           align-items: center;
         }
-      
+
         nav li {
           margin: 0;
           margin-top: 0.5rem;
-          margin-bottom: 0.5rem;
+         margin-bottom: 0.5rem;
         }
-      
+
         .nav-menu a {
           text-align: center;
         }
+
+        .header-header {
+          justify-content: space-between;
+        }
+
+        .menu-button {
+          margin-left: auto;
+        }
+      
+
 
         main {
           padding: 0;
@@ -264,9 +279,20 @@
         margin-bottom: 0px;
       }
 
+      #features li:hover {
+        cursor: pointer;
+      }
+
       #features a {
         text-decoration: none;
         background: -webkit-linear-gradient(180deg, rgba(58,12,163,1) 0%, rgba(76,201,240,.75) 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: .5px .5px #0000007a;
+      }
+
+      #features a:hover {
+        background: -webkit-linear-gradient(180deg, rgba(76,201,240,.75) 0% , rgba(58,12,163,1) 50%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-shadow: .5px .5px #0000007a;
@@ -382,9 +408,37 @@
         font-style: italic;
         text-align: right;
         margin-top: 10px;
-      }      
+      } 
+      
+      /*About us section*/
 
-     
+      #aboutus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #aboutus h2 {
+        font-size: 48px;
+        text-align: center;
+        background: -webkit-linear-gradient(180deg, rgba(58,12,163,.5) 39%, rgba(76,201,240,.75) 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;        
+        text-shadow: 1px 1px #0000007a;
+        margin: 10%;
+      }
+
+      #aboutus p {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+      }
+
+      #aboutus p:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425);
+      }
     
       /* Contact section */
       #contact {
@@ -437,6 +491,12 @@
         outline: none;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
       }
+
+      #contact input:hover,
+      #contact textarea:hover {
+        outline: none;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      }
       
       #contact textarea {
         height: 120px;
@@ -471,6 +531,8 @@
 
       /*Footer section*/
       footer {
+        position: relative;
+        bottom: 0;
         background: rgb(40,29,89);
         background: linear-gradient(90deg, rgba(40,29,89,1) 30%, rgba(255,48,104,1) 100%);
         color: #fff;
